@@ -5,20 +5,19 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 /**
  * Created by Tenma on 2017/12/15.
  */
 
-public class AppMain extends AppCompatActivity {
+public class AppMain_battle extends AppCompatActivity {
 
     ImageButton battle, magic, check, escape;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_battle);
     }
 
     public void StatusStart(View view) {

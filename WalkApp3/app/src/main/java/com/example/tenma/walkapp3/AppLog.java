@@ -16,7 +16,7 @@ public class AppLog extends AppCompatActivity{
         setContentView(R.layout.activity_log);
     }
     public void MainBack(View view){
-        Intent intent = new Intent(this, AppMain.class);
+        Intent intent = new Intent(this, AppMain_battle.class);
         //遷移先の画面を起動
         startActivity(intent);
     }

@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AppMain"></activity>
+        <activity android:name=".AppMain_battle"></activity>
+        <activity android:name=".AppMain_scenario"></activity>
         <activity android:name=".AppStatus"></activity>
         <activity android:name=".AppLog"></activity>
     </application>

@@ -9,14 +9,20 @@ import android.view.View;
  * Created by Tenma on 2017/12/15.
  */
 
-public class AppStatus extends AppCompatActivity{
+public class AppMain_scenario extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_status);
+        setContentView(R.layout.autivity_main_scenario);
     }
-    public void MainBack(View view){
-        Intent intent = new Intent(this, AppMain_battle.class);
+    public void StatusStart(View view) {
+        Intent intent = new Intent(this, AppStatus.class);
+        //遷移先の画面を起動
+        startActivity(intent);
+    }
+
+    public void LogStart(View view) {
+        Intent intent = new Intent(this, AppLog.class);
         //遷移先の画面を起動
         startActivity(intent);
     }

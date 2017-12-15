@@ -13,7 +13,7 @@ public class AppTitle extends AppCompatActivity {
         setContentView(R.layout.activity_title);
     }
     public void AppStart(View view){
-        Intent intent = new Intent(this, AppMain.class);
+        Intent intent = new Intent(this, AppMain_battle.class);
         //遷移先の画面を起動
         startActivity(intent);
 
