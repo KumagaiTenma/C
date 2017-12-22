@@ -12,15 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Log画面"
-            android:textColor="#ffffff"
-            android:layout_gravity="center"
-            />
-
         <ImageButton
             android:id="@+id/imageButton2"
             android:layout_width="match_parent"
@@ -28,6 +19,27 @@
             android:background="@null"
             android:onClick="MainBack"
             app:srcCompat="@drawable/all_button" />
+
+        <ImageView
+            android:scaleType="centerCrop"
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/images3" />
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="387dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:id="@+id/date_display"
+            android:layout_width="283dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="400dp"
+            android:text="TextView" />
 
     </FrameLayout>
 

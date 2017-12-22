@@ -58,16 +58,16 @@
 
         <ImageView
             android:id="@+id/main_hukidashi"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:scaleType="fitXY"
             app:srcCompat="@drawable/main_hukidasi" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_marginTop="30dp">
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -80,8 +80,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@null"
-                    app:srcCompat="@drawable/main_battle1"
-                    android:onClick="change_battle"/>
+                    android:onClick="change"
+                    app:srcCompat="@drawable/main_battle1" />
 
                 <ImageButton
                     android:id="@+id/main_magic"
@@ -89,8 +89,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@null"
-                    app:srcCompat="@drawable/main_magic1"
-                    android:onClick="change_magic"/>
+                    android:onClick="change"
+                    app:srcCompat="@drawable/main_magic1" />
             </LinearLayout>
 
             <LinearLayout
@@ -104,8 +104,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@null"
-                    app:srcCompat="@drawable/main_check1"
-                    android:onClick="change_check"/>
+                    android:onClick="change"
+                    app:srcCompat="@drawable/main_check1" />
 
                 <ImageButton
                     android:id="@+id/main_escape"
@@ -113,10 +113,27 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@null"
-                    app:srcCompat="@drawable/main_escape1"
-                    android:onClick="change_escape"/>
+                    android:onClick="change"
+                    app:srcCompat="@drawable/main_escape1" />
             </LinearLayout>
         </LinearLayout>
+
+
+        <ImageButton
+            android:id="@+id/main_hukidashi2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:onClick="change"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/main_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            />
 
 
     </FrameLayout>

@@ -1,9 +1,9 @@
 package com.example.tenma.walkapp3;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 
@@ -11,13 +11,12 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 /**
- * Created by yuuma on 2017/12/20.
+ * Created by yuuma on 2017/12/18.
  */
 
-public class AppTitle extends  ActivityAddToBGMandSE{
+public class SccrenTitle extends ActivityAddToBGMandSE {
     Timer timer = null;
     Handler handle = new Handler();
-
 
     //BGM関係
     ////////////////////////////////
@@ -37,44 +36,50 @@ public class AppTitle extends  ActivityAddToBGMandSE{
     /////////////////////////////////
 
 
-        @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.rogo);
-        findViewById(R.id.imageView2).startAnimation(AnimationUtils.loadAnimation(this, R.anim.senni6));
+        setContentView(R.layout.sccrentitle);
+//        アニメーション
+        findViewById(R.id.Start).startAnimation(AnimationUtils.loadAnimation(this, R.anim.start));
+        findViewById(R.id.TitleName).startAnimation(AnimationUtils.loadAnimation(this, R.anim.title_name));
+
+//        タイマーの時間
         if (timer == null) {
             timer = new Timer();
             timer.schedule(new MyTimer(), 5000); // ミリ秒でセット
         }
     }
+//    AppStratボタンのめそっど
     public void AppStart(View view){
-        Intent intent = new Intent(this, SccrenTitle.class);
+        Intent intent = new Intent(this, AppMain_scenario.class);
         //遷移先の画面を起動
         startActivity(intent);
+//        タイマーキャンセル
         timer.cancel();
 
 
-
     }
-
+//    douzyutuメソッド
+    public void Start(View view){
+//        遷移
+        Intent intent = new Intent(SccrenTitle.this, AppMain_scenario.class);
+        //遷移先の画面を起動
+        startActivity(intent);
+    }
+//    タイマーのメソッド
     class MyTimer extends TimerTask {
         @Override
         public void run() {
             handle.post(new Runnable() {
                 @Override
+//                実際にタイマーを起動したときに何をしたいか書くところ
                 public void run() {
-                    Intent intent = new Intent(AppTitle.this, Epilogue.class);
-                    //遷移先の画面を起動
-                    startActivity(intent);
-                    // アニメーションの設定
-                    overridePendingTransition(R.anim.senni5, R.anim.senni6);
-//                    tv1 = (TextView) findViewById(R.id.textView2);
-//                    tv1.setText("ん");
-//                    tv1.setTextColor(Color.WHITE);
 
+
+                    // アニメーションの設定
+//                    overridePendingTransition(R.anim.senni5, R.anim.senni6);
                 }
             });
         }
     }
 }
-
